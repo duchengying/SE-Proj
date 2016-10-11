@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../style/font-awesome.min.css">
+    <link rel="stylesheet" href="../style/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/public.css">
+    <link rel="stylesheet" href="../style/userInfoShow.css">
+</head>
+<body>
+<!--
+    展示用户信息,主要是查看别人的消息时使用
+-->
+<header>
+    <h1 class="logo">大学生在校编码平台</h1>
+    <div class="nav-bar">
+        <i class="bar"></i>
+        <i class="bar"></i>
+        <i class="bar"></i>
+    </div>
+    <span class="nav">
+        <a href="#" class="userLink click-toggle">娄聪@<span class="team-name">AllyPowers</span><i
+                class="down-ico"></i></a>
+        <ul class="show-hidden">
+            <li><a href="#">个人信息</a></li>
+            <li><a href="#">我的团队</a></li>
+            <li><a href="#">退出</a></li>
+        </ul>
+    </span>
+</header>
+<section class="mobile-nav">
+    <ul>
+        <li>娄聪@<span class="team-name">AllyPowers</span></li>
+        <li><a href="#">个人信息</a></li>
+        <li><a href="#">我的团队</a></li>
+        <li><a href="#">退出</a></li>
+    </ul>
+</section>
+
+<section class="main-wrapper container">
+    <div class="info-show col-md-12 col-sm-12">
+        <div class="user-avatar center-block" data-imgUrl = "http://tp4.sinaimg.cn/2908583755/180/5746801334/1"></div>
+        <h2 class="user-name">术尘_Lance</h2>
+        <h4 class="single-intro">Make interesting things with interesting people</h4>
+    </div>
+    <div class="main-info-display col-md-12 col-sm-12">
+        <span class="label cur-label" data-target = "basic">个人资料</span>
+        <span class="label" data-target = "university">院校信息</span>
+        <div class="block basic-info-show" id="show">
+            <p><span>专业方向:</span><span>数据库</span></p>
+            <p><span>邮箱:</span><span>lc1456666@outlook.com</span></p>
+            <p><span>个人简介:</span><span>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦你是我的小苹果呀呀呀呀我类个去个去,丫的只是什么情况的情况,北鼻瑞迪GO-GO-GO</span></p>
+            <p><span>个人网站:</span><span><a href="#">此处放置恶意链接攻击</a></span></p>
+            <p><span>所在团队:</span><span>暂无或a链接</span></p>
+        </div>
+        <div class="block university-info-show" id="hidden">
+            <p><span>学校:</span><span>成都大学</span></p>
+            <p><span>专业:</span><span>计算机科学</span></p>
+            <p><span>年级:</span><span>2014</span></p>
+        </div>
+    </div>
+</section>
+
+<!-- 建站相关信息介绍: 网站相关  联系合作  关注我们 -->
+<section class="infoShow">
+    <div class="col-md-1"></div>
+    <section class="aboutSite col-md-2">
+        <span class="title">网站相关</span>
+        <span><a href="#">关于我们</a></span>
+        <span><a href="#">帮助中心</a></span>
+    </section>
+    <section class="contactCo col-md-2">
+        <span class="title">联系合作</span>
+        <span><a href="#">联系我们</a></span>
+        <span><a href="#">加入我们</a></span>
+    </section>
+    <section class="aboutUs col-md-2">
+        <span class="title">关注我们</span>
+        <span><a href="#">github</a></span>
+        <span><a href="#">微博</a></span>
+        <span><a href="#">Twitter</a></span>
+    </section>
+    <section class="friendlyLink col-md-2">
+        <span class="title">友情链接</span>
+        <span><a href="#">w3cplus</a></span>
+        <span><a href="#">w3c</a></span>
+        <span><a href="#">MDN</a></span>
+    </section>
+    <section class="declare col-md-3">
+        <span>网站声明</span>
+        <p>本站点所有资源均由用户产生与使用,站点仅是一个资源的存放与分享平台,不对相关的资源的版权负责。</p>
+    </section>
+    <div class="col-md-1 col-sm-0"></div>
+</section>
+
+<!--回到顶部功能部分-->
+<span class="backToTop">
+    <i class="fa fa-chevron-up"></i>
+</span>
+
+<!-- 相关版权申明 -->
+<footer>
+    <span class="block">Copyright © 2016 CodeIU</span>
+    <span class="block">浙ICP备 15005796号-2   浙公网安备 33010602002000号</span>
+</footer>
+<script src="../script/utils.js"></script>
+<script src="../script/public.js"></script>
+<script src="../script/userInfoShow.js"></script>
+</body>
+</html>

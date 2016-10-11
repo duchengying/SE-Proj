@@ -1,0 +1,248 @@
+body{
+    background-color: #f8f9fa;
+}
+body div.launchingBar{
+    display: none;
+}
+body.launching div.launchingBar{
+    display: block;
+    position: fixed;
+    height: 3px;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+@keyframes launchBarAni { from { left: -550px;} to { left: 1750px }  }
+body.launching div.launchingBar .bar{
+    display: inline-block;
+    height: 3px;
+    width: 500px;
+    position: absolute;
+    top: 0;
+    background-color: #00b7ee;
+    left: -550px;
+    -webkit-animation: launchBarAni 1.3s ease-in 0s infinite;
+    -o-animation: launchBarAni 1.3s ease-in 0s infinite;
+    animation: launchBarAni 1.3s ease-in 0s infinite;
+}
+body ul.editImply{
+    position: fixed;
+    top: 100px;
+    right: 0;
+    padding-left: 0;
+    z-index: 200;
+}
+@keyframes implyShowAndHidden {
+    from { right: -1rem; opacity: 0; filter: opacity(0)}
+    25% { right: 0; opacity: 1; filter: opacity(1)}
+    75% { right: 0; opacity: 1; filter: opacity(1)}
+    100% { right: -1rem; opacity: 0; filter: opacity(0)}
+}
+body ul.editImply li{
+    position: relative;
+    list-style: none;
+    width: 15rem;
+    margin: 10px 0;
+    padding: 1.3rem 2rem 1.3rem 0.7rem;
+    border: 1px solid #fff;
+    border-right: 0;
+    color: #fff;
+    background-color: rgba(99,167,101,0.5);
+    cursor: pointer;
+    right: -1rem;
+    opacity: 0;
+    filter: opacity(0);
+    -webkit-animation: implyShowAndHidden 3s ease-in 0s 1;
+    -o-animation: implyShowAndHidden 3s ease-in 0s 1;
+    animation: implyShowAndHidden 3s ease-in 0s 1;
+}
+body ul.editImply li i{
+    position: absolute;
+    right: 10px;
+    color: #000;
+}
+.dis-None{
+    display: none;
+}
+.main-wrapper .info-show{
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 10px 0;
+}
+.main-wrapper .info-show .user-avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #00b7ee;
+}
+.main-wrapper .info-show h2.user-name{
+    text-align: center;
+    font-weight: 400;
+}
+.main-wrapper .info-show h4.single-intro{
+    text-align: center;
+    font-weight: 200;
+    color: #8c8c8c;
+}
+.main-wrapper .left-nav{
+    text-align: right;
+}
+.main-wrapper .left-nav h3{
+    margin-bottom: 20px;
+}
+.main-wrapper .left-nav h5{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #8c8c8c;
+}
+.main-wrapper .info-details{
+    padding: 20px 30px;
+    background-color: #fff;
+}
+.main-wrapper .info-details h2{
+    font-size: 2.6rem;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    margin: 0;
+}
+.main-wrapper .info-details h2 em{
+    font-style: inherit;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding-left: 1rem;
+    color: #6d6d6d;
+}
+.main-wrapper .info-details ul{
+    padding-left: 0;
+}
+.main-wrapper .info-details a.btn{
+    color: #fff;
+    background-color: #79BD8F;
+}
+.main-wrapper .info-details ul li{
+    list-style: none;
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.main-wrapper .info-details ul li.no-team .to-team-page{
+    display: none;
+}
+.main-wrapper .info-details ul li.in-team .team-join-create{
+    display: none;
+}
+.main-wrapper .info-details ul span.join-for-answer input{
+    pointer-events: none;
+}
+.main-wrapper .info-details ul span.join-for-answer a{
+    background-color: #ccc;
+    pointer-events: none;
+}
+.main-wrapper .info-details ul span{
+    display: inline-block;
+}
+.main-wrapper .info-details span.avatar-up img{
+    width: 70px;
+    height: 70px;
+    margin-right: 1rem;
+    float: left;
+}
+.main-wrapper .info-details .avatar-set{
+    height: 70px;
+    min-width: 30rem;
+    padding-top: 1rem;
+}
+.main-wrapper .info-details .avatar-set .btn{
+    padding: 5px 7px;
+    color: #fff;
+    background-color: #79BD8F;
+}
+.main-wrapper .info-details span:first-child{
+    width: 15%;
+    line-height: 2.5em;
+}
+.main-wrapper .info-details span input{
+    width: 20rem;
+}
+.main-wrapper .info-details input[type="text"]{
+    border: 0;
+    outline: 0;
+    margin: 0.5rem 0;
+}
+.main-wrapper .info-details textarea{
+    width: 20rem;
+    height: 3.2rem;   /*1.6 level up*/
+    overflow: hidden;
+    border: 0;
+    outline: 0;
+    resize: none;
+}
+.main-wrapper .info-details select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    padding-left: 1rem;
+    pointer-events: none;
+    color: #8c8c8c;
+    height: 100%;
+}
+.main-wrapper .info-details span.edit{
+    flex-grow: 1;
+    text-align: right;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    line-height: inherit;
+}
+.main-wrapper .info-details span em{
+    font-style: normal;
+    display: none;
+    vertical-align: bottom;
+    color: #FF6138;
+    font-weight: 100;
+    padding-right: 20px;
+}
+.main-wrapper .info-details span.error-in em{
+    display: inline-block;
+}
+.main-wrapper .info-details span.edit a{
+    display: inline-block;
+    vertical-align: sub;
+}
+.main-wrapper .info-details span.edit a.cancel-edit{
+    color: #8c8c8c;
+}
+.main-wrapper .info-details span.edit a:first-of-type{
+    visibility: hidden;
+}
+.main-wrapper .info-details li.cur-edit span:last-child a:first-of-type{
+    visibility: inherit;
+}
+.main-wrapper .info-details li.cur-edit select{
+    pointer-events: auto;
+    color: #000;
+}
+.main-wrapper .info-details li.cur-edit input,textarea{
+    border-bottom: 1px solid #d2c7c7;
+    background-color: transparent;
+    color: #FF6138;
+}
+@media only screen and (max-width: 789px){
+    .main-wrapper .left-nav{
+        display: none;
+    }
+    .main-wrapper .info-details .avatar-set{
+        min-width: 0;
+        padding-top: 0;
+    }
+    .main-wrapper .info-details span:first-child{
+        line-height: 1.5rem;
+        width: 100%;
+    }
+
+}
+

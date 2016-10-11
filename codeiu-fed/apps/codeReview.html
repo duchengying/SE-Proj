@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../style/font-awesome.min.css">
+    <link rel="stylesheet" href="../style/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/public.css">
+    <link rel="stylesheet" href="../style/codeReview.css">
+</head>
+<body>
+<header>
+    <h1 class="logo">大学生在校编码平台</h1>
+    <div class="nav-bar">
+        <i class="bar"></i>
+        <i class="bar"></i>
+        <i class="bar"></i>
+    </div>
+    <span class="nav">
+        <a href="#" class="userLink click-toggle">娄聪@<span class="team-name">AllyPowers</span><i
+                class="down-ico"></i></a>
+        <ul class="show-hidden">
+            <li><a href="#">个人信息</a></li>
+            <li><a href="#">我的团队</a></li>
+            <li><a href="#">退出</a></li>
+        </ul>
+    </span>
+</header>
+<section class="mobile-nav">
+    <ul>
+        <li>娄聪@<span class="team-name">AllyPowers</span></li>
+        <li><a href="#">个人信息</a></li>
+        <li><a href="#">我的团队</a></li>
+        <li><a href="#">退出</a></li>
+    </ul>
+</section>
+
+<section class="container">
+    <h2 class="header-l2 col-md-12 col-sm-12">任务五十一：多功能相册（<a href="#">查看详情</a>）</h2>
+    <section class="main-content col-md-12 col-sm-12">
+        <section class="finishInfo col-md-12 col-sm-12">
+            <span class="team-name">团队：<a href="#">锟斤拷</a></span>
+            <span class="baseData"><a href="#">丘翔</a> 更新于04-19&nbsp;14:12&nbsp;&nbsp;已经有5人 review&nbsp;&nbsp;&nbsp;平均得分: 9.6</span>
+            <span class="codeSrc">代码地址：<a href="#">https://github.com/qiuxiang/gallery/blob/master/src/scripts/gallery-rows.js</a></span>
+            <span class="demoSrc">demo：<a href="#">http://qiuxiang.qiniudn.com/gallery/views/gallery-rows.html</a></span>
+            <div class="intro">
+                <p>图片源是 500px，用的是自己搭的图片接口服务器，源代码 https://github.com/qiuxiang/gallery-server.git。</p>
+                <p>简单说下实现方法，首先，定一个行最小高度，如 300px，然后根据当前容器长度计算长宽比，得到 minAspectRatio。新加入的图片分别依次计算长宽比，并累加，一旦累加的长宽比大于 minAspectRatio，则之前累加的图片作为一行。</p>
+                <p>欢迎 review、讨论。</p>
+            </div>
+            <a href="javascript:void (0)" class="btn" id="releaseReview">发表review</a>
+        </section>
+        <div class="comment col-md-12 col-sm-12">
+            <span class="comment-header">
+                <a href="#">学习小组</a>&nbsp;review 05-05 09:31（<a href="#">张伟</a> 05-05 09:31 更新）<i class="fa fa-pencil"></i><a href="javascript:void (0)" id="self-edit">编辑</a>&nbsp;&nbsp;<i class="fa fa-comment"></i><a href="javascript:void (0)" class="comment-btn">评论</a>
+                <i class="grade">10分</i>
+            </span>
+            <div class="comment-content">
+                换算图片宽高比的懂了，但是请问一下我动态抓取图片并且创建IMG的时候，图片的宽高往往都加载的慢得到的值都是0，百度了下一般都用img.onload获取，你们是通过什么方法获取每张图的宽高的呢
+                <ul class="comment-reply-cols">
+                    <li class="comment-reply">
+                        <p class="rep-info">作者<a href="#">丘翔</a> 回复 04-17 20:55</p>
+                        <p class="rep-content">我觉得木桶布局的要点不在于每行放多少张图片，而是尽量让每行高度差不多，比如我这里设定的 300px。如果理解为高度相同的图片放到一行就不对了，图片的顺序不应该被打乱。有一些图片宽高比特别高或特别低，无非就是在一行里多放或少放的问题。
+                            这里的代码主要用了 js 面向对象的写法，可以参考这里 https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript。<br><br>
+                            对于这个页面，我主要划分了3个模块，核心布局 GalleryRows 负责实现木桶布局，弹出层 Modal 负责实现大图的显示，应用层 Application 对各模块进行组织以及页面逻辑的实现。其中图片的获取在 Application 里进行调用，源代码是 utils.js 里的 getPhotos()，通过 ajax 方式获取某个图片分享平台的图片列表。
+                            不建议你看 commit……一方面这个项目是3个相册一起实现的，最初的 commit 还没开始做这个任务。另一方面，中间的过程我一直在思考和改进，代码结构也一直在变。<br><br>
+                            promise 是更好地处理 js 回调的一种技术，在 es6 已经是标准模块，这个项目里使用的 promise 是我自己实现的一个简单版本。你可以自己查看相关资料了解 https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise
+                        </p>
+                    </li>
+                    <li class="comment-reply">
+                        <p class="rep-info">作者<a href="#">丘翔</a> 回复 04-17 20:55</p>
+                        <p class="rep-content">
+                            谢谢你的回答
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="comment col-md-12 col-sm-12">
+            <span class="comment-header">
+                <a href="#">学习小组</a>&nbsp;review 05-05 09:31（<a href="#">张伟</a> 05-05 09:31 更新）<i class="fa fa-comment"></i><a href="javascript:void (0)" class="comment-btn">评论</a>
+                <i class="grade">10分</i>
+            </span>
+            <div class="comment-content">
+                换算图片宽高比的懂了，但是请问一下我动态抓取图片并且创建IMG的时候，图片的宽高往往都加载的慢得到的值都是0，百度了下一般都用img.onload获取，你们是通过什么方法获取每张图的宽高的呢
+                <ul class="comment-reply-cols">
+                    <li class="comment-reply">
+                        <p class="rep-info">作者<a href="#">丘翔</a> 回复 04-17 20:55</p>
+                        <p class="rep-content">我觉得木桶布局的要点不在于每行放多少张图片，而是尽量让每行高度差不多，比如我这里设定的 300px。如果理解为高度相同的图片放到一行就不对了，图片的顺序不应该被打乱。有一些图片宽高比特别高或特别低，无非就是在一行里多放或少放的问题。
+                            这里的代码主要用了 js 面向对象的写法，可以参考这里 https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript。<br><br>
+                            对于这个页面，我主要划分了3个模块，核心布局 GalleryRows 负责实现木桶布局，弹出层 Modal 负责实现大图的显示，应用层 Application 对各模块进行组织以及页面逻辑的实现。其中图片的获取在 Application 里进行调用，源代码是 utils.js 里的 getPhotos()，通过 ajax 方式获取某个图片分享平台的图片列表。
+                            不建议你看 commit……一方面这个项目是3个相册一起实现的，最初的 commit 还没开始做这个任务。另一方面，中间的过程我一直在思考和改进，代码结构也一直在变。<br><br>
+                            promise 是更好地处理 js 回调的一种技术，在 es6 已经是标准模块，这个项目里使用的 promise 是我自己实现的一个简单版本。你可以自己查看相关资料了解 https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise
+                        </p>
+                    </li>
+                    <li class="comment-reply">
+                        <p class="rep-info">作者<a href="#">丘翔</a> 回复 04-17 20:55</p>
+                        <p class="rep-content">
+                            谢谢你的回答
+                        </p>
+                    </li>
+                    <li class="comment-reply">
+                        <p class="rep-info">我的 回复 04-17 20:55 &nbsp; <a href="#">删除</a></p>
+                        <p class="rep-content">
+                            这是页面用户自己的回复的测试
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- 建站相关信息介绍: 网站相关  联系合作  关注我们 -->
+<section class="infoShow">
+    <div class="col-md-1"></div>
+    <section class="aboutSite col-md-2">
+        <span class="title">网站相关</span>
+        <span><a href="#">关于我们</a></span>
+        <span><a href="#">帮助中心</a></span>
+    </section>
+    <section class="contactCo col-md-2">
+        <span class="title">联系合作</span>
+        <span><a href="#">联系我们</a></span>
+        <span><a href="#">加入我们</a></span>
+    </section>
+    <section class="aboutUs col-md-2">
+        <span class="title">关注我们</span>
+        <span><a href="#">github</a></span>
+        <span><a href="#">微博</a></span>
+        <span><a href="#">Twitter</a></span>
+    </section>
+    <section class="friendlyLink col-md-2">
+        <span class="title">友情链接</span>
+        <span><a href="#">w3cplus</a></span>
+        <span><a href="#">w3c</a></span>
+        <span><a href="#">MDN</a></span>
+    </section>
+    <section class="declare col-md-3">
+        <span>网站声明</span>
+        <p>本站点所有资源均由用户产生与使用,站点仅是一个资源的存放与分享平台,不对相关的资源的版权负责。</p>
+    </section>
+    <div class="col-md-1 col-sm-0"></div>
+</section>
+
+<!--回到顶部功能部分-->
+<span class="backToTop">
+    <i class="fa fa-chevron-up"></i>
+</span>
+<!-- 相关版权申明 -->
+<footer>
+    <span class="block">Copyright © 2016 CodeIU</span>
+    <span class="block">浙ICP备 15005796号-2   浙公网安备 33010602002000号</span>
+</footer>
+<script src="../script/utils.js"></script>
+<script src="../script/public.js"></script>
+<script src="../script/codeReview.js"></script>
+</body>
+</html>

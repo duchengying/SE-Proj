@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../style/font-awesome.min.css">
+    <link rel="stylesheet" href="../style/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/public.css">
+    <link rel="stylesheet" type="text/css" href="../style/simditor.css">
+    <link rel="stylesheet" href="../style/calendarModel.css">
+    <link rel="stylesheet" href="../style/taskRelease.css">
+</head>
+<body>
+<header>
+    <h1 class="logo">大学生在校编码平台</h1>
+    <div class="nav-bar">
+        <i class="bar"></i>
+        <i class="bar"></i>
+        <i class="bar"></i>
+    </div>
+    <span class="nav">
+        <a href="#" class="userLink click-toggle">娄聪@<span class="team-name">AllyPowers</span><i class="down-ico"></i></a>
+        <ul class="show-hidden">
+            <li><a href="#">个人信息</a></li>
+            <li><a href="#">我的团队</a></li>
+            <li><a href="#">退出</a></li>
+        </ul>
+    </span>
+</header>
+<section class="mobile-nav">
+    <ul>
+        <li>娄聪@<span class="team-name">AllyPowers</span></li>
+        <li><a href="#">个人信息</a></li>
+        <li><a href="#">我的团队</a></li>
+        <li><a href="#">退出</a></li>
+    </ul>
+</section>
+<section class="container main-wrapper" id="main-container">
+    <h2 class="header-l2 col-md-12 col-sm-12">发布任务</h2>
+    <form action="#" method="post">
+        <div class="header-l3 col-md-11 col-sm-11">任务基本信息<em class="warn"></em></div>
+        <div class="inItemContainer col-md-11 col-sm-11">
+            <!-- 任务标题 任务难度   面向人群   截止时间-->
+            <label for="task-title">标题:</label><input type="text" name="task-title" id="task-title"><br>
+            <label for="task-difficulty">任务难度:</label>
+            <select name="task-difficulty" id="task-difficulty">
+                <option value="simple">简单</option>
+                <option value="medium">中等</option>
+                <option value="hard">困难</option>
+            </select><br>
+            <label for="task-for-people">面向人群:</label><input type="text" name="task-for-people" id="task-for-people"><br>
+            <label for="task-deadline">截止时间:</label><input type="text" name="task-deadline" id="task-deadline" readonly>
+            <label for="" id="calenderControl"><img src="../images/calendar.png" alt=""></label>
+            <div class="calenderWrapper"></div>
+        </div>
+        <div class="header-l3 col-md-11 col-sm-11">任务目的<em>( 点击＋可添加项 )</em><em class="warn"></em></div>
+        <div class="inItemContainer col-md-11 col-sm-11" data-basicInfo="task-aim">
+            <label for="task-aim-1">任务目的:</label><input type="text" name="task-aim" id="task-aim-1">
+            <a href="javascript: void(0)" class="addItem">﹢</a>
+        </div>
+        <div class="header-l3 col-md-11 col-sm-11">任务描述<em class="warn"></em></div>
+        <div class="editorWrapper col-md-11 col-sm-11">
+            <textarea id="task-describe-editor" placeholder="Balabala" class="col-md-12 col-sm-12"></textarea>
+        </div>
+        <div class="header-l3 col-md-11 col-sm-11">任务注意事项<em class="warn"></em></div>
+        <div class="inItemContainer col-md-11 col-sm-11" data-basicInfo="task-attention">
+            <label for="task-attention-1">注意事项:</label><input type="text" name="task-attention" id="task-attention-1">
+            <a href="javascript: void(0)" class="addItem">﹢</a>
+        </div>
+        <div class="header-l3 col-md-11 col-sm-11">任务协作建议<em class="warn"></em></div>
+        <div class="inItemContainer col-md-11 col-sm-11" data-basicInfo="task-teamAdvice">
+            <label for="task-teamAdvice-1">协作建议:</label><input type="text" name="task-teamAdvice" id="task-teamAdvice-1">
+            <a href="javascript: void(0)" class="addItem">﹢</a>
+        </div>
+        <div class="header-l3 col-md-11 col-sm-11">在线学习参考资料<em class="warn"></em></div>
+        <div class="inItemContainer referLink col-md-11 col-sm-11" data-basicInfo="task-referLink">
+            <label for="task-referLink-1">参考链接:</label>
+            <input type="text" name="task-referLink-name" id="task-referLink-1" placeholder="链接文字">
+            <input type="text" name="task-referLink-link" placeholder="链接地址">
+            <a href="javascript: void(0)" class="addItem">﹢</a>
+        </div>
+        <div class="btns col-md-11 col-sm-11">
+            <input type="reset" value="重置">
+            <input type="submit" value="提交">
+        </div>
+    </form>
+</section>
+<!-- 建站相关信息介绍: 网站相关  联系合作  关注我们 -->
+<section class="infoShow">
+    <div class="col-md-1"></div>
+    <section class="aboutSite col-md-2">
+        <span class="title">网站相关</span>
+        <span><a href="#">关于我们</a></span>
+        <span><a href="#">帮助中心</a></span>
+    </section>
+    <section class="contactCo col-md-2">
+        <span class="title">联系合作</span>
+        <span><a href="#">联系我们</a></span>
+        <span><a href="#">加入我们</a></span>
+    </section>
+    <section class="aboutUs col-md-2">
+        <span class="title">关注我们</span>
+        <span><a href="#">github</a></span>
+        <span><a href="#">微博</a></span>
+        <span><a href="#">Twitter</a></span>
+    </section>
+    <section class="friendlyLink col-md-2">
+        <span class="title">友情链接</span>
+        <span><a href="#">w3cplus</a></span>
+        <span><a href="#">w3c</a></span>
+        <span><a href="#">MDN</a></span>
+    </section>
+    <section class="declare col-md-3">
+        <span>网站声明</span>
+        <p>本站点所有资源均由用户产生与使用,站点仅是一个资源的存放与分享平台,不对相关的资源的版权负责。</p>
+    </section>
+    <div class="col-md-1 col-sm-0"></div>
+</section>
+
+<!--回到顶部功能部分-->
+<span class="backToTop">
+    <i class="fa fa-chevron-up"></i>
+</span>
+
+
+<!-- 相关版权申明 -->
+<footer>
+    <span class="block">Copyright © 2016 CodeIU</span>
+    <span class="block">浙ICP备 15005796号-2   浙公网安备 33010602002000号</span>
+</footer>
+<script src="../script/utils.js"></script>
+<script src="../script/public.js"></script>
+<script type="text/javascript" src="../script/jquery.min.js"></script>
+<script type="text/javascript" src="../script/module.js"></script>
+<script type="text/javascript" src="../script/hotkeys.min.js"></script>
+<script type="text/javascript" src="../script/uploader.js"></script>
+<script type="text/javascript" src="../script/simditor.min.js"></script>
+<script>
+    var editor = new Simditor({
+        textarea: $('#task-describe-editor')
+        //optional options
+    });
+</script>
+<script type="text/javascript" src="../script/calendar.js"></script>
+<script type="text/javascript" src="../script/taskRelease.js"></script>
+</body>
+</html>

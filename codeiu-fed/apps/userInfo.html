@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../style/font-awesome.min.css">
+    <link rel="stylesheet" href="../style/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/public.css">
+    <link rel="stylesheet" href="../style/userInfo.css">
+</head>
+<!--class="launching" 开启加载演示添加launching(className) 取消演示去掉-->
+<body>
+<div class="launchingBar">
+    <span class="bar"></span>
+</div>
+<!--直接在ul中添加li,3.5s之后删除即可完成一个通知通知与通知之间可以马上跟进-->
+<ul class="editImply">
+    <li>个人网站地址已更新<i>×</i></li>
+    <li>手机号已更新<i>×</i></li>
+</ul>
+<header>
+    <h1 class="logo">大学生在校编码平台</h1>
+    <div class="nav-bar">
+        <i class="bar"></i>
+        <i class="bar"></i>
+        <i class="bar"></i>
+    </div>
+    <span class="nav">
+        <a href="#" class="userLink click-toggle">娄聪@<span class="team-name">AllyPowers</span><i class="down-ico"></i></a>
+        <ul class="show-hidden">
+            <li><a href="#">个人信息</a></li>
+            <li><a href="#">我的团队</a></li>
+            <li><a href="#">退出</a></li>
+        </ul>
+    </span>
+</header>
+<section class="mobile-nav">
+    <ul>
+        <li>娄聪@<span class="team-name">AllyPowers</span></li>
+        <li><a href="#">个人信息</a></li>
+        <li><a href="#">我的团队</a></li>
+        <li><a href="#">退出</a></li>
+    </ul>
+</section>
+<section class="main-wrapper container">
+    <div class="info-show col-md-12 col-sm-12">
+        <div class="user-avatar center-block" data-imgUrl = "http://tp4.sinaimg.cn/2908583755/180/5746801334/1"></div>
+        <h2 class="user-name">术尘_Lance</h2>
+        <h4 class="single-intro">Make interesting things with interesting people</h4>
+    </div>
+    <div class="col-md-2 col-sm-0 left-nav">
+        <h3>账户设置</h3>
+        <a href="#bi-set"><h5>基础信息设置</h5></a>
+        <a href="#ui-set"><h5>院校信息设置</h5></a>
+    </div>
+    <div class="info-details col-md-10 col-sm-12">
+        <h2 id="bi-set">个人资料</h2>
+        <ul>
+            <li>
+                <span>头像</span>
+                <span class="avatar-up">
+                    <img src="http://tp4.sinaimg.cn/2908583755/180/5746801334/1" alt="avatar">
+                    <div class="avatar-set">
+                        仅支持 jpg、png 格式大小 5M 以内图片。<br>
+                        <input type="file" style="display: none" id="file-uploader">
+                        <a href="javascript: void(0)" class="btn file-upload-btn">点击上传</a>
+                    </div>
+                </span>
+            </li>
+            <li>
+                <span>个人方向</span>
+                <span>
+                    <select name="direction" data-defaultIndex = "0">
+                        <option value="ww">个人方向的选择必须与选择的导师的方向一致,需加以限制</option>
+                        <option value="fe">前端</option>
+                        <option value="be">后端</option>
+                        <option value="db">数据库</option>
+                        <option value="is">信息安全</option>
+                        <option value="ios">ios开发</option>
+                        <option value="ad">android开发</option>
+                        <option value="ed">嵌入式开发</option>
+                    </select>
+                </span>
+                <span class="edit">
+                    <a href="javascript: void(0)">保存</a>
+                    <a href="javascript: void(0)">编辑</a>
+                </span>
+            </li>
+            <li>
+                <span>邮箱</span>
+                <span><input name="email" type="text" placeholder="原email或请输入email提示"></span>
+                <span class="edit">
+                    <em>邮箱格式错误</em>
+                    <a href="javascript: void(0)">保存</a>
+                    <a href="javascript: void(0)">编辑</a>
+                </span>
+            </li>
+            <li>
+                <span>姓名</span>
+                <span><input name="userName" type="text" placeholder="原姓名或请输入姓名提示"></span>
+                <span class="edit">
+                    <em>姓名不能为空</em>
+                    <a href="javascript: void(0)">保存</a>
+                    <a href="javascript: void(0)">编辑</a>
+                </span>
+            </li>
+            <li>
+                <span>电话</span>
+                <span><input name="phone" type="text" placeholder="原电话或请输入电话提示"></span>
+                <span class="edit">
+                    <em>电话格式错误</em>
+                    <a href="javascript: void(0)">保存</a>
+                    <a href="javascript: void(0)">编辑</a>
+                </span>
+            </li>
+            <li>
+                <span>一句话介绍</span>
+                <span><input id="ss-intro" type="text" placeholder="原s介绍或请输入s介绍提示"></span>
+                <span class="edit">
+                    <a href="javascript: void(0)">保存</a>
+                    <a href="javascript: void(0)">编辑</a>
+                </span>
+            </li>
+            <li>
+                <span>个人简介</span>
+                <span><textarea name="intro" placeholder="原个人简介或请输入个人简介的提示"></textarea></span>
+                <span class="edit">
+                    <a href="javascript: void(0)">保存</a>
+                    <a href="javascript: void(0)">编辑</a>
+                </span>
+            </li>
+            <li>
+                <span>个人网址</span>
+                <span><input name="person-page" type="text" placeholder="原个人网址或请输入个人网址的提示"></span>
+                <span class="edit">
+                    <a href="javascript: void(0)">保存</a>
+                    <a href="javascript: void(0)">编辑</a>
+                </span>
+            </li>
+            <li class="no-team">
+                <span>团队参与</span>
+                <!--span.join-for-answer-->
+                <span class="team-join-create error-in">
+                    <input type="text" id="teamName" placeholder="请输入团队名|等待对方队长回复">
+                    <a href="javascript: void(0)" class="btn t-create">创建</a>
+                    <a href="javascript: void(0)" class="btn t-join">加入</a>
+                    <em>(先有导师,才有团队)输入的团队名不存在|输入的团队名已存在</em>
+                </span>
+                <span class="to-team-page"><a href="#">Allypowers</a></span>
+            </li>
+        </ul>
+        <!--院校相关信息 院校用户请如实填写,方便导师和校方进行统计-->
+        <h2 id="ui-set">院校信息<em>院校用户请如实填写,方便导师和校方进行统计</em></h2>
+        <ul>
+            <li>
+                <span>学校</span>
+                <span>
+                    <select name="university" data-defaultIndex = "0">
+                        <option value="cdu">成都大学</option>
+                    </select>
+                </span>
+                <span class="edit">
+                    <a href="javascript: void(0)">保存</a>
+                    <a href="javascript: void(0)">编辑</a>
+                </span>
+            </li>
+            <li>
+                <span>专业</span>
+                <span>
+                    <select name="major" data-defaultIndex = "2">
+                        <option value="se">软件工程</option>
+                        <option value="dm">数字媒体</option>
+                        <option value="cs">计算机科学</option>
+                        <option value="ne">网络工程</option>
+                        <option value="ce">通信工程</option>
+                        <option value="at">自动化</option>
+                    </select>
+                </span>
+                <span class="edit">
+                    <a href="javascript: void(0)">保存</a>
+                    <a href="javascript: void(0)">编辑</a>
+                </span>
+            </li>
+            <li>
+                <span>年级</span>
+                <span>
+                    <select name="grade" data-defaultIndex = "2">
+                        <option value="14">2014</option>
+                        <option value="15">2015</option>
+                        <option value="16">2016</option>
+                    </select>
+                </span>
+                <span class="edit">
+                    <a href="javascript: void(0)">保存</a>
+                    <a href="javascript: void(0)">编辑</a>
+                </span>
+            </li>
+            <li>
+                <span>学号</span>
+                <span>
+                    <input type="text" name="stuNo" id="stuNo" placeholder="显示学号或请求输入学号提示">
+                </span>
+                <span class="edit">
+                    <em>学号格式错误</em>
+                    <a href="javascript: void(0)">保存</a>
+                    <a href="javascript: void(0)">编辑</a>
+                </span>
+            </li>
+        </ul>
+    </div>
+
+</section>
+<!-- 建站相关信息介绍: 网站相关  联系合作  关注我们 -->
+<section class="infoShow">
+    <div class="col-md-1"></div>
+    <section class="aboutSite col-md-2">
+        <span class="title">网站相关</span>
+        <span><a href="#">关于我们</a></span>
+        <span><a href="#">帮助中心</a></span>
+    </section>
+    <section class="contactCo col-md-2">
+        <span class="title">联系合作</span>
+        <span><a href="#">联系我们</a></span>
+        <span><a href="#">加入我们</a></span>
+    </section>
+    <section class="aboutUs col-md-2">
+        <span class="title">关注我们</span>
+        <span><a href="#">github</a></span>
+        <span><a href="#">微博</a></span>
+        <span><a href="#">Twitter</a></span>
+    </section>
+    <section class="friendlyLink col-md-2">
+        <span class="title">友情链接</span>
+        <span><a href="#">w3cplus</a></span>
+        <span><a href="#">w3c</a></span>
+        <span><a href="#">MDN</a></span>
+    </section>
+    <section class="declare col-md-3">
+        <span>网站声明</span>
+        <p>本站点所有资源均由用户产生与使用,站点仅是一个资源的存放与分享平台,不对相关的资源的版权负责。</p>
+    </section>
+    <div class="col-md-1 col-sm-0"></div>
+</section>
+
+
+<!--回到顶部功能部分-->
+<span class="backToTop">
+    <i class="fa fa-chevron-up"></i>
+</span>
+
+<!-- 相关版权申明 -->
+<footer>
+    <span class="block">Copyright © 2016 CodeIU</span>
+    <span class="block">浙ICP备 15005796号-2   浙公网安备 33010602002000号</span>
+</footer>
+<script src="../script/utils.js"></script>
+<script src="../script/public.js"></script>
+<script src="../script/userInfo.js"></script>
+</body>
+</html>
